@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Niner Connections</title>
+	<!--Reused  meta  file in savedConnections.ejs using include function -->
+	<%include partials/meta.ejs%>
+	<!--<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+</head>
+<body>
+		
+	<div class="fullHeight">
+		<!--Reused  header file in savedConnections.ejs using include function -->
+		<%include partials/header.ejs%>
+		<!--<div class="header">
+
+
+
+			<a href="./index.html">
+				<img id="image1" src="./image4.jpg" alt="brand image placeholder" />Niner Connections
+			</a>
+			<span class="signInPlaceholder">
+				<a href="#">Start New Connection</a>
+				<a href="./savedConnections.html">Sign Up</a>
+				<a href="./savedConnections.html">Login</a>
+			</span>
+		</div>-->
+		<!--Reused  navigation  file in savedConnections.ejs using include function -->
+<%include partials/navigation.ejs%>
+	<!--	<div class="topnav">
+			<a href="./connections.html">Connections</a>
+			<span class="signIn">Welcome Norm</span>
+		</div>-->
+		<div class="row fullHeight">
+
+			<div class="column right fullHeight background2 fullWidth">
+				<div class="maincontentSaved">
+					<table class="myItemsBrief">
+
+						<tr>
+							<th>Connection</th>
+							<th>Category</th>
+
+							<th>Going</th>
+							<th></th>
+							<th></th>
+						</tr>
+						<tr>
+								<% for(var j=0;j < userProfile.length;j++) {%>
+							<td>&#x1f52b;<%=userProfile[j].connection_name%></td>
+							<td><%=userProfile[j].connection_topic%></td>
+										<td> <span><%=rsvp[j]%></span></td>
+							<td><a class="temp" href="/connection?&connection_ID=<%= userProfile[j].connection_ID %>">Update</a></td>
+                    <td><a class="temp" href="/rsvp?action=delete&connection_ID=<%= userProfile[j].connection_ID %>">Delete</a></td>
+							
+						</tr>
+						<% } %>
+						
+
+					</table>
+				</div>
+			</div>
+		</div>
+		<!--Reused  footer file in savedConnections.ejs using include function -->
+		<%include partials/footer.ejs%>
+		<!--<div class="footer">
+			&copy; CCI Connections.
+			&nbsp;&nbsp;&nbsp;<a href="#"> About</a>
+			&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;<a href="#">Contact</a>
+
+			<i class="footerIcons fa fa-facebook-f"></i>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+
+		</div>-->
+	</div>
+</body>
+</html>

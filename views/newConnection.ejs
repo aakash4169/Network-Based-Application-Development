@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Niner Connections</title>
+	<% include partials/meta.ejs %>
+	<!--<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/styles/styles.css" type="text/css">
+	<link rel="stylesheet" href="../assets/styles/font-awesome.min.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">-->
+</head>
+<body>
+
+	<div class="fullHeight">
+		<% include partials/header.ejs%>
+
+	<!--	<div class="header">
+
+
+			<a href="./index.html">
+				<img id="image1" src="./image4.jpg" alt="brand image placeholder" />Niner Connections
+			</a>
+
+				<span class="signInPlaceholder">
+					<a href="#">Start New Connection</a>
+					<a href="./savedConnections.html">Sign Up</a>
+					<a href="./savedConnections.html">Login</a>
+				</span>
+</div>-->
+<% include partials/navigation.ejs%>
+		<!--<div class="topnav">
+			<a href="./connections.html">Connections</a>
+
+		</div> -->
+		
+		<div class="row fullHeight">
+
+			<div class="column right fullHeight background2 fullWidth">
+
+				<div class="maincontentConnections">
+						<form action="/addConnection" method="post">
+					<table class="tableConnection">
+						<tr>
+								<td>
+										<label for="id">Connection ID</label>
+								</td>
+								<td>
+									<!-- some error for posting form with placeholders-->
+										<input type="text"  id="id" name="id">
+								</td>
+							<td>
+									<label for="topic">topic</label>
+							</td>
+							<td>
+								<!-- some error for posting form with placeholders-->
+									<input type="text"  id="topic" name="topic">
+							</td>
+							
+						</tr>
+						<tr>
+								<td>
+										<label for="name">name</label>
+										
+								</td>
+								<td>
+										<input type="text"  id="name" name="name" >
+								</td>
+								
+						</tr>
+						<tr>
+								<td>
+									    <label for="details">description</label>
+  			
+								</td>
+								<td>
+										
+										<input type="text"  id="details" name="details" style="height:200px;" value="">
+								</td>
+									
+						</tr>
+						<tr>
+								<td>
+										<label for="where">location</label>
+  				
+								</td>
+								<td>
+										<input type="text"  id="location" name="location" value="">
+								</td>
+										
+						</tr>
+						<tr>
+							<td>
+									<label for="when">Date</label>
+							</td>
+							<td>
+									&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <input type="text"  id="date" name="date"  value=""> &nbsp; &nbsp; &nbsp; &#128197;
+							</td>
+
+							<td>
+									<label for="when">Time</label>
+							</td>
+							<td>
+									&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <input type="text"  id="time" name="time" value=""> &nbsp; &nbsp; &nbsp; &#128197;
+							</td>
+						</tr>
+					</table>
+				
+  				
+				
+					
+					
+					
+  				
+					<input type="submit" value="Create Connection">
+				</form>
+				
+				</div>
+			</div>
+		</div>
+
+		<% include partials/footer.ejs%>
+		<!--<div class="footer">
+			&copy; CCI Connections.
+			&nbsp;&nbsp;&nbsp;<a href="#"> About</a>
+			&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;<a href="#">Contact</a>
+
+			<i class="footerIcons fa fa-facebook-f"></i>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+
+		</div>-->
+	</div>
+</body>
+</html>

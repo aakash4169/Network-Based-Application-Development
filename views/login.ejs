@@ -1,0 +1,84 @@
+<!--
+signIn view is created
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Niner Connections</title>
+	<% include partials/meta.ejs %>
+	<!--<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/styles/styles.css" type="text/css">
+	<link rel="stylesheet" href="../assets/styles/font-awesome.min.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">-->
+</head>
+<body>
+
+	<div class="fullHeight">
+		<% include partials/header.ejs%>
+
+	<!--	<div class="header">
+
+
+			<a href="./index.html">
+				<img id="image1" src="./image4.jpg" alt="brand image placeholder" />Niner Connections
+			</a>
+
+				<span class="signInPlaceholder">
+					<a href="#">Start New Connection</a>
+					<a href="./savedConnections.html">Sign Up</a>
+					<a href="./savedConnections.html">Login</a>
+				</span>
+</div>-->
+<% include partials/navigation.ejs%>
+		<!--<div class="topnav">
+			<a href="./connections.html">Connections</a>
+
+		</div> -->
+		<div class="row fullHeight">
+
+			<div class="column right fullHeight background2 fullWidth">
+
+				<div class="maincontentConnections">
+					<form action="/signIn?action=login" method="post">
+						<% if(flag===2){%>
+							<h3><strong>Incorrect Email or password </strong></h3>
+							<% } %>
+					<table class="tableConnection">
+						<tr>
+							<td>
+						<label for="username">Username</label>
+						</td>
+						<td>
+						<input type="text"  id="username" name="username" >
+						</td>
+						</tr>
+							<tr>
+								<td>
+						<label for="password">Password</label>
+						</td>
+						<td>
+						<input type="password"  id="password" name="password">
+						</td>
+						</tr>
+					</table>
+					<input type="submit">
+					</form>
+					
+				</div>
+			</div>
+		</div>
+		<% include partials/footer.ejs%>
+		<!--<div class="footer">
+			&copy; CCI Connections.
+			&nbsp;&nbsp;&nbsp;<a href="#"> About</a>
+			&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;<a href="#">Contact</a>
+
+			<i class="footerIcons fa fa-facebook-f"></i>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i>
+
+		</div>-->
+	</div>
+</body>
+</html>
